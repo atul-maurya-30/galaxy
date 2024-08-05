@@ -5,9 +5,10 @@ After training and testing various models, the performance metrics for each mode
 
 |         **Model**        | **Precision Class 0** | **Precision Class 1** | **Recall Class 0** | **Recall Class 1** | **f1-score Class 0** | **f1-score Class 1** | **Accuracy** |
 |:------------------------:|:---------------------:|:---------------------:|:------------------:|:------------------:|:--------------------:|:--------------------:|:------------:|
-| Decision Tree Classifier |          0.86         |          0.56         |        0.85        |        0.58        |         0.86         |         0.57         |  **0.78515** |
-| Logistic Regression      |          0.85         |          0.72         |        0.93        |        0.50        |         0.89         |         0.59         |  **0.82725** |
-| Random Forest Classifier |          0.93         |          0.57         |        0.87        |        0.73        |         0.90         |         0.64         |  **0.8417**  |
+| Decision Tree Classifier |          0.79         |          0.77         |        0.77        |        0.79        |         0.78         |         0.78         |  **0.78095** |
+| Logistic Regression      |          0.80         |          0.81         |        0.81        |        0.79        |         0.81         |         0.80         |  **0.80222** |
+| Random Forest Classifier |          0.84         |          0.85         |        0.85        |        0.84        |         0.85         |         0.85         |  **0.84715** |
+
 
 #### Analysis
 
