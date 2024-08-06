@@ -37,10 +37,10 @@ def submit():
     # Render the output template with the predictions result
     if prediction == 0:
         print(prediction)
-        return render_template("inner-page.html",prediction="Starforming")
+        return render_template("inner-page.html",prediction="StarForming ✨")
     else:
         print(prediction)
-        return render_template("inner-page.html",prediction="Starbursting")
+        return render_template("inner-page.html",prediction="StarBursting 💥")
 # Run the application
 if __name__ == "__main__":
     app.run(debug=True)
