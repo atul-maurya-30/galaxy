@@ -1,117 +1,192 @@
-# Galaxy Classification Project
-## Model Evaluation
+# Sloan Digital Sky Survey (SDSS) Galaxy Classification Using Machine Learning
 
-After training and testing various models, the performance metrics for each model were compared to determine the best performing algorithm. The table below summarizes the precision, recall, f1-score, and accuracy of each model:
+## Table of Contents
 
-|         **Model**        | **Precision Class 0** | **Precision Class 1** | **Recall Class 0** | **Recall Class 1** | **f1-score Class 0** | **f1-score Class 1** | **Accuracy** |
+- [About Dataset](#about-dataset)
+- [Project Overview](#project-overview)
+- [Project Flow](#project-flow)
+- [Architecture](#architecture)
+- [Project Phases](#project-phases)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Conclusion](#conclusion)
+
+## About Dataset
+
+### SDSS Galaxy Classification DR18
+
+The Sloan Digital Sky Survey (SDSS) has scanned about one-third of the sky and identified around 1 billion objects, including nearly 3 million galaxies. This project utilizes a dataset with 100,000 rows of photometric image data, focusing on classifying galaxies into two subclasses: 'STARFORMING' and 'STARBURST'. The dataset is available for download from Kaggle [here](https://www.kaggle.com/datasets/bryancimo/sdss-galaxy-classification-dr18).
+
+## Project Overview
+
+The Galaxy Classification Project aims to predict galaxy subclasses using machine learning techniques. This project encompasses data collection, preparation, exploratory data analysis (EDA), model building, performance testing, and deployment. The final model is integrated with a web framework to provide real-time predictions based on user input.
+
+## Project Flow
+
+1. **User Interaction:** Users input galaxy data through a web-based interface.
+2. **Model Analysis:** The machine learning model integrated into the web application analyzes the input data.
+3. **Prediction Display:** The model's prediction for the galaxy subclass is displayed on the user interface.
+
+### Key Steps
+
+1. **Data Collection & Preparation**
+   - **Collect the Dataset:** Obtain the dataset from SDSS.
+   - **Data Preparation:** Clean and preprocess the data for analysis.
+
+2. **Exploratory Data Analysis (EDA)**
+   - **Descriptive Statistics:** Analyze fundamental characteristics of the data.
+   - **Visual Analysis:** Use visual tools to explore patterns and trends.
+
+3. **Model Building**
+   - **Training the Model:** Train various machine learning algorithms.
+   - **Testing the Model:** Evaluate the models using performance metrics.
+
+4. **Performance Testing**
+   - **Evaluation Metrics:** Assess the model using metrics like accuracy, precision, recall, F1-score, and confusion matrix.
+   - **Model Evaluation:** Compare models based on these metrics to determine the best performer.
+   - **Hyperparameter Tuning:** Optimize model performance by adjusting hyperparameters.
+
+5. **Model Deployment**
+   - **Save the Best Model:** Store the best-performing model for future use.
+   - **Integrate with Web Framework:** Implement the model within a Flask web application for user interaction.
+
+## Architecture
+
+The Galaxy Classification Project follows a modular architecture:
+
+- **Data Preparation Module:** Handles loading, cleaning, and preparing the dataset.
+- **Model Training Module:** Trains and evaluates various machine learning models.
+- **Web Application Module:** Implements a Flask web application for user interaction.
+- **Deployment Module:** Manages the deployment and running of the application.
+
+## Project Phases
+
+### 1. Data Collection & Preparation
+
+#### Collect the Dataset
+
+The dataset for this project is sourced from the Sloan Digital Sky Survey (SDSS). It consists of photometric image data for galaxies, with 100,000 rows and two primary galaxy subclasses: 'STARFORMING' and 'STARBURST'. Download the dataset from Kaggle [here](https://www.kaggle.com/datasets/bryancimo/sdss-galaxy-classification-dr18).
+
+#### Data Preparation
+
+- **Handling Missing Values:** Identify and address missing values in the dataset.
+- **Data Type Conversion:** Convert the 'subclass' column from object to integer using ordinal encoding.
+- **Feature Selection:** Select relevant features for model training and refine the dataset.
+
+### 2. Exploratory Data Analysis (EDA)
+
+#### Descriptive Statistics
+
+- **Purpose:** Understand the fundamental characteristics of the data.
+- **Tools:** Utilize Pandas `describe()` function to summarize statistics such as mean, standard deviation, and percentiles.
+
+#### Visual Analysis
+
+- **Purpose:** Visually explore data to identify patterns, trends, and outliers.
+- **Tools:** Use Seaborn and Matplotlib for visualizations like box plots and heatmaps.
+
+### 3. Model Building
+
+#### Training the Model
+
+Train various machine learning algorithms to identify the best model:
+
+- **Decision Tree Classifier:** A simple and interpretable model.
+- **Logistic Regression:** A statistical method for binary classification.
+- **Random Forest Classifier:** An ensemble method that improves accuracy through multiple decision trees.
+
+#### Testing the Model
+
+- **Metrics:** Evaluate model performance using accuracy, precision, recall, F1-score, and confusion matrix.
+- **Comparison:** Compare models based on these metrics to determine the best performer.
+
+### 4. Performance Testing
+
+#### Evaluation Metrics
+
+- **Purpose:** Ensure the model’s effectiveness and robustness.
+- **Metrics:** Use accuracy, precision, recall, F1-score, and confusion matrix to assess performance.
+
+#### Model Evaluation
+
+After training and testing various models, the performance metrics for each model are compared. The table below summarizes the precision, recall, F1-score, and accuracy of each model:
+
+| **Model**                | **Precision Class 0** | **Precision Class 1** | **Recall Class 0** | **Recall Class 1** | **F1-score Class 0** | **F1-score Class 1** | **Accuracy** |
 |:------------------------:|:---------------------:|:---------------------:|:------------------:|:------------------:|:--------------------:|:--------------------:|:------------:|
 | Decision Tree Classifier |          0.79         |          0.77         |        0.77        |        0.79        |         0.78         |         0.78         |  **0.78095** |
 | Logistic Regression      |          0.80         |          0.81         |        0.81        |        0.79        |         0.81         |         0.80         |  **0.80222** |
 | Random Forest Classifier |          0.84         |          0.85         |        0.85        |        0.84        |         0.85         |         0.85         |  **0.84715** |
 
-
-#### Analysis
-
-- **Decision Tree Classifier**: 
-  - **Strengths**: High precision for Class 0.
-  - **Weaknesses**: Lower recall for Class 1, indicating that the model misses some instances of Class 1.
-  - **Overall Performance**: The model has the lowest overall accuracy compared to others.
+- **Decision Tree Classifier**:
+  - **Strengths:** High precision for Class 0.
+  - **Weaknesses:** Lower recall for Class 1, indicating that the model misses some instances of Class 1.
+  - **Overall Performance:** The model has the lowest overall accuracy compared to others.
 
 - **Logistic Regression**:
-  - **Strengths**: Good balance in precision for both classes, making it a reliable choice.
-  - **Weaknesses**: Lower recall for Class 1, suggesting it is less effective at identifying Class 1 instances.
-  - **Overall Performance**: Moderate overall accuracy, making it a decent choice but not the best.
+  - **Strengths:** Good balance in precision for both classes, making it a reliable choice.
+  - **Weaknesses:** Lower recall for Class 1, suggesting it is less effective at identifying Class 1 instances.
+  - **Overall Performance:** Moderate overall accuracy, making it a decent choice.
 
 - **Random Forest Classifier**:
-  - **Strengths**: Highest precision and recall for Class 0, and higher recall for Class 1.
-  - **Weaknesses**: Slightly lower precision for Class 1 compared to Logistic Regression.
-  - **Overall Performance**: Best overall accuracy, indicating it performs best across all metrics.
+  - **Strengths:** Highest precision and recall for both classes, indicating a well-rounded model.
+  - **Weaknesses:** None significant compared to other models.
+  - **Overall Performance:** The best overall accuracy, making it the preferred model for this classification task.
 
-## About Dataset
-### SDSS Galaxy Classification DR18
+#### Hyperparameter Tuning
 
-The Sloan Digital Sky Survey (SDSS) has searched about one-third of the sky and found around 1 billion objects and almost 3 million of those are galaxies. It contains 100,000 rows of photometric image data and the galaxy subclass is limited to two types, 'STARFORMING' or 'STARBURST'
-
-## Project Overview
-
-The Galaxy Classification Project aims to predict galaxy subclasses using machine learning techniques. The project involves data collection, preparation, exploratory data analysis (EDA), model building, performance testing, and deployment. The final model is integrated with a web framework to provide real-time predictions based on user input.
-
-## Project Flow
-
-1. **User Interaction**: Users interact with a web-based UI to input data.
-2. **Model Analysis**: The input data is analyzed using a machine learning model integrated into the web application.
-3. **Prediction Display**: The model’s prediction is displayed to the user on the UI.
-
-## Detailed Steps
-
-### 1. Data Collection & Preparation
-
-#### Collect the Dataset
-The dataset for this project is sourced from the Sloan Digital Sky Survey (SDSS). It consists of photometric image data for galaxies, with 100,000 rows and two primary galaxy subclasses: 'STARFORMING' and 'STARBURST'. The dataset can be downloaded from Kaggle [here](https://www.kaggle.com/datasets/your-dataset-link).
-
-#### Data Preparation
-- **Handling Missing Values**: Missing values are identified and appropriately handled.
-- **Data Type Conversion**: The 'subclass' column is converted from object to integer using ordinal encoding.
-- **Feature Selection**: The dataset is refined by selecting relevant features for model training.
-
-### 2. Exploratory Data Analysis (EDA)
-
-#### Descriptive Statistics
-- **Purpose**: To understand the fundamental characteristics of the data.
-- **Tools**: Pandas `describe()` function to summarize statistics like mean, standard deviation, and percentiles.
-
-#### Visual Analysis
-- **Purpose**: To visually explore data and identify patterns, trends, and outliers.
-- **Tools**: Seaborn and Matplotlib for creating visualizations like box plots and heatmaps.
-
-### 3. Model Building
-
-#### Training the Model
-Different machine learning algorithms are trained to find the best model:
-- **Decision Tree Classifier**: A simple and interpretable model.
-- **Logistic Regression**: A statistical method for binary classification.
-- **Random Forest Classifier**: An ensemble method that improves accuracy through multiple decision trees.
-
-#### Testing the Model
-- **Metrics**: Accuracy, precision, recall, F1-score, and confusion matrix are used to evaluate model performance.
-- **Comparison**: Models are compared based on these metrics to select the best-performing model.
-
-### 4. Performance Testing
-
-#### Evaluation Metrics
-- **Purpose**: To ensure the model's effectiveness and robustness.
-- **Metrics**: Includes accuracy, precision, recall, F1-score, and confusion matrix.
-- **Hyperparameter Tuning**: Comparing model performance before and after hyperparameter tuning to improve accuracy.
+Optimize the model performance by adjusting hyperparameters to improve accuracy further.
 
 ### 5. Model Deployment
 
 #### Save the Best Model
-- **File**: `RF.pkl` - The best-performing Random Forest model is saved using Python’s `pickle` module. This avoids the need to retrain the model and allows for future use.
+
+- **File:** `RF.pkl` - Save the best-performing Random Forest model using Python’s `pickle` module. This avoids retraining the model and allows for future use.
 
 #### Integrate with Web Framework
-- **Web Application**: Built using Flask to create a user-friendly interface.
-- **HTML Pages**: 
+
+- **Web Application:** Build using Flask to create a user-friendly interface.
+- **HTML Pages**:
   - `index.html` - The main page where users input their data.
-  - `inner-page.html` - The page displaying the prediction results.
+  - `inner-page.html` - The results page displaying predictions.
 
-### Web Framework Integration
+## Features
 
-#### Building HTML Pages
-- **Files**: 
-  - `index.html` - Contains the form for user input.
-  - `inner-page.html` - Displays the prediction results.
+- **User-Friendly Interface:** Provides an intuitive interface for users to input galaxy data and view predictions.
+- **Real-Time Predictions:** Uses a trained machine learning model to deliver immediate results based on user inputs.
+- **Comprehensive Analysis:** Includes detailed steps in exploratory data analysis, model building, performance testing, and deployment.
 
-#### Building Server-Side Script
-- **File**: `app.py` - Contains Flask routes for rendering HTML pages and handling user inputs.
-- **Functionality**: 
-  - Load the saved model (`RF.pkl`).
-  - Render HTML pages.
-  - Retrieve input values from the UI and make predictions using the model.
+## Installation
 
-#### Running the Web Application
-1. **Setup**: Open VS Code and navigate to the folder containing `app.py`.
-2. **Command**: Run `python app.py` to start the Flask server.
-3. **Access**: Open a web browser and go to `http://127.0.0.1:5000` to interact with the web application.
-4. **Usage**: Enter input values on the `index.html` page and view predictions on the `inner-page.html` page.
+1. **Clone the Repository:**
 
+    ```bash
+    git clone https://github.com/atul-maurya-30/galaxy.git
+    cd galaxy
+    ```
 
+2. **Install Required Packages:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+1. **Run the Flask Application:**
+
+    ```bash
+    python app.py
+    ```
+
+2. **Access the Web Application:** Open a web browser and go to [http://127.0.0.1:5000](http://127.0.0.1:5000).
+
+3. **Enter Galaxy Data:** Use the form on `index.html` to input galaxy data.
+
+4. **View Predictions:** After submitting the input data, view predictions on `inner-page.html`.
+
+## Conclusion
+
+Thank you for exploring the Galaxy Classification Project! We hope this project provides valuable insights into galaxy classification using machine learning. For any questions or contributions, please feel free to reach out.
+
+The Galaxy Classification Team
