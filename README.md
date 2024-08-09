@@ -112,24 +112,26 @@ Train various machine learning algorithms to identify the best model:
 
 After training and testing various models, the performance metrics for each model are compared. The table below summarizes the precision, recall, F1-score, and accuracy of each model:
 
-| **Model**                | **Precision Class 0** | **Precision Class 1** | **Recall Class 0** | **Recall Class 1** | **F1-score Class 0** | **F1-score Class 1** | **Accuracy** |
+|         **Model**        | **Precision Class 0** | **Precision Class 1** | **Recall Class 0** | **Recall Class 1** | **f1-score Class 0** | **f1-score Class 1** | **Accuracy** |
 |:------------------------:|:---------------------:|:---------------------:|:------------------:|:------------------:|:--------------------:|:--------------------:|:------------:|
-| Decision Tree Classifier |          0.79         |          0.77         |        0.77        |        0.79        |         0.78         |         0.78         |  **0.78095** |
-| Logistic Regression      |          0.80         |          0.81         |        0.81        |        0.79        |         0.81         |         0.80         |  **0.80222** |
-| Random Forest Classifier |          0.84         |          0.85         |        0.85        |        0.84        |         0.85         |         0.85         |  **0.84715** |
+| Decision Tree Classifier |          0.78         |          0.80         |        0.80        |        0.78        |         0.79         |         0.79         |  **0.79168** |
+| Logistic Regression      |          0.79         |          0.81         |        0.82        |        0.78        |         0.80         |         0.80         |  **0.80165** |
+| Random Forest Classifier |          0.84         |          0.81         |        0.82        |        0.84        |         0.83         |         0.82         |  **0.82575** |
 
-- **Decision Tree Classifier**:
-  - **Strengths:** High precision for Class 0.
-  - **Weaknesses:** Lower recall for Class 1, indicating that the model misses some instances of Class 1.
+### Performance Analysis
+
+- **Decision Tree Classifier:**
+  - **Strengths:** Balanced recall for both classes, providing a consistent prediction rate.
+  - **Weaknesses:** Lower precision for Class 0, indicating that the model is less accurate in predicting Class 0 instances.
   - **Overall Performance:** The model has the lowest overall accuracy compared to others.
 
-- **Logistic Regression**:
-  - **Strengths:** Good balance in precision for both classes, making it a reliable choice.
+- **Logistic Regression:**
+  - **Strengths:** Good precision for both classes and high recall for Class 0, making it a reliable choice for balanced performance.
   - **Weaknesses:** Lower recall for Class 1, suggesting it is less effective at identifying Class 1 instances.
-  - **Overall Performance:** Moderate overall accuracy, making it a decent choice.
+  - **Overall Performance:** Moderate overall accuracy, offering a balanced performance between precision and recall.
 
-- **Random Forest Classifier**:
-  - **Strengths:** Highest precision and recall for both classes, indicating a well-rounded model.
+- **Random Forest Classifier:**
+  - **Strengths:** Highest precision and recall for both classes, indicating a well-rounded and effective model.
   - **Weaknesses:** None significant compared to other models.
   - **Overall Performance:** The best overall accuracy, making it the preferred model for this classification task.
 
