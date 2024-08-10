@@ -1,5 +1,7 @@
 # Sloan Digital Sky Survey (SDSS) Galaxy Classification Using Machine Learning
 
+This project uses machine learning to classify galaxies from the SDSS dataset into 'STARFORMING' and 'STARBURST' categories, enabling real-time predictions through a web application.
+
 ## Table of Contents
 
 - [About Dataset](#about-dataset)
