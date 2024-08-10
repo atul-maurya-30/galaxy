@@ -8,7 +8,7 @@ This project uses machine learning to classify galaxies from the SDSS dataset in
 ![Galaxy Classification](/static/images/pic2.png)
 
 
-## Table of Contents
+## Contents 
 
 - [About Dataset](#about-dataset)
 - [Project Overview](#project-overview)
