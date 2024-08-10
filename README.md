@@ -2,6 +2,12 @@
 
 This project uses machine learning to classify galaxies from the SDSS dataset into 'STARFORMING' and 'STARBURST' categories, enabling real-time predictions through a web application.
 
+
+![Galaxy Classification](images/pic1.png)
+
+![Galaxy Classification](images/pic2.png)
+
+
 ## Table of Contents
 
 - [About Dataset](#about-dataset)
