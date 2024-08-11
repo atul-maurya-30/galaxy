@@ -220,6 +220,8 @@ ___
 
    This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+---
+
 ## Deployment
 
 You can access the deployed application here: [Galaxy Classifier](https://galaxy-classifier.onrender.com)
