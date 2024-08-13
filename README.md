@@ -23,6 +23,7 @@ ___
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
+- [Deployment](#deployment)
 
 ---
 
@@ -218,6 +219,14 @@ ___
 ## License
 
    This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Deployment
+
+You can access the deployed application here: [Galaxy Classifier](https://galaxy-classifier.onrender.com)
+
+Feel free to try out the app and explore its features.
 
 ---
 
