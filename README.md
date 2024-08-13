@@ -4,11 +4,11 @@
 
 ___
 
-![Galaxy Classification](/static/images/pic1.png)
+![Galaxy Classification](/static/images/pic1.avif)
 
 ---
 
-![Galaxy Classification](/static/images/pic2.png)
+![Galaxy Classification](/static/images/pic2.avif)
 
 ---
 
