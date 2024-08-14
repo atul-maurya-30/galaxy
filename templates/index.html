@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore SDSS Galaxy Classification with Machine Learning. Use our tool to classify galaxies based on photometric data and gain insights into the universe.">
     <title>SDSS Galaxy Classification</title>
-    <style>
+    <!-- <style>
         html,
         body {
             height: 100%;
@@ -202,7 +203,14 @@
             width: 80%;
             background-color: rgba(255, 255, 255, 0.2);
         }
-    
+    .predict-section input[type="text"]::placeholder {
+            color: #442d2d;
+        }
+
+        .predict-section input[type="text"]:focus {
+            outline: none;
+            border-color: #00aaff;
+        }
         footer {
             padding: 30px;
             text-align: center;
@@ -388,18 +396,29 @@
             .step p {
                 font-size: 0.85rem;
             }
+                .predict-section input[type="text"] {
+                font-size: 1rem;
+                padding: 10px;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
         }
+    </style> -->
+    <style>
+    body,html{padding:0;margin:0}.overlay,header{background-color:rgba(0,0,0,.5)}.navb,body,header{color:#fff}.about-section h1,.header,.predict-section h2,.section1 h1,.section2 h1{font-family:Roboto,sans-serif;font-weight:700}.btn:hover,.navb a:hover,.predict-section input[type=text]{background-color:rgba(255,255,255,.2)}body,footer,header{position:relative}.contact-icons,nav{display:flex;gap:20px}.overflow-x-hidden,body,html{overflow-x:hidden}.predict-section,.text-center,footer,header{text-align:center}body,html{height:100%}body{font-family:'Open Sans',sans-serif;background:url('/static/images/galaxy.avif') center center/cover no-repeat fixed}.overlay{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}header{padding:20px}nav{justify-content:space-between;align-items:center;margin-bottom:20px}.header{font-size:50px}.btn,.navb{font-family:'Open Sans',sans-serif}.navb{display:flex;height:70px;list-style:none;padding:25px;margin:0}.btn,.navb a{padding:10px 20px;color:#fff}.navb li{margin:0 10px}.navb a{text-decoration:none;border-radius:5px;transition:background-color .3s,color .3s,transform .3s}.navb a:hover{color:#0af;transform:scale(1.1)}.btn{border:2px solid #fff;border-radius:7px;cursor:pointer;background-color:#120e0d;font-weight:600;transition:.3s}.btn:hover{box-shadow:0 0 10px rgba(255,255,255,.8);transform:scale(1.05)}.minimum_vh{min-height:110vh}.about-section,.section1,.section2{padding:20px;text-align:center;background-color:rgba(0,0,0,.5);border-radius:8px;margin:20px 0}.about-section h1,.section1 h1,.section2 h1{font-size:2rem}.about-section p,.section1 p,.section2 p{padding:0 8vw}.about-section,.section1{background-color:rgba(0,0,0,.5)}.about-section .flex,.section1 .flex{display:flex;flex-direction:column;justify-content:center;align-items:center;max-width:800px;margin:0 auto}.about-section .my-2,.section1 .my-4,.section2 .my-4{margin-top:1rem;margin-bottom:1rem}.about-section .my-2,.section1 .my-3,.section2 .my-3{margin-top:.75rem;margin-bottom:.75rem}.predict-section{margin:20px auto;max-width:600px;padding:20px;border:1px solid #ddd;border-radius:5px;background-color:rgba(255,255,255,.3)}.predict-section h2{font-size:1.5rem}.predict-section form{display:flex;flex-direction:column;align-items:center;gap:10px}.predict-section label{font-family:'Open Sans',sans-serif;font-weight:300}.predict-section input[type=text]{margin-bottom:10px;padding:8px;border-radius:4px;border:1px solid #ddd;width:80%}.predict-section input[type=text]::placeholder{color:#442d2d;text-align: center;}.predict-section input[type=text]:focus{outline:0;border-color:#0af}footer{padding:30px;background-color:rgba(0,0,0,.7);color:#fff;width:100%}.footer-content{max-width:1200px;margin:0 auto;padding:0 20px}.contact-icons{justify-content:center;margin:20px 0}.contact-icon{width:40px;height:40px;transition:.3s}.contact-icon:hover{filter:brightness(1.5);transform:scale(1.1)}.text-blue,footer p{color:#fff}.highlighted{font-weight:bolder;font-size:1.05rem}.h{border:0;height:1px;background:#ddd}.steps{margin:20px auto;max-width:800px;padding:0 15px}.step{margin:20px 0}.step h2{font-family:Roboto,sans-serif;font-weight:700;font-size:1.5rem;margin-bottom:10px}.step p{font-family:'Open Sans',sans-serif;font-weight:300;font-size:1rem;line-height:1.6}@media only screen and (max-width:768px){.container{max-width:90vw}.topleft,.topright{width:100%}.topright .gameimg{width:100%;height:auto}.minimum_vh{min-height:auto}.px-2{padding-left:8px;padding-right:8px}.steps{padding:0 10px;max-width:100%}.step h2{font-size:1.25rem}.step p{font-size:.9rem}.navb{flex-direction:column;align-items:center}}@media only screen and (max-width:480px){.btn,.step h2{font-size:1rem}.flex,.predict-section{padding:15px;width:90%}.topleft,.topright{width:100%}.topright .gameimg{width:100%;height:auto}.about-section h1,.about-section p,.section1 h1,.section2 h1,.section2 p{padding:0 5vw}.box{min-width:80vw}.flex{padding:15px}.h{height:0}.steps{padding:0 5px}.step{margin:15px 0}.step p{font-size:.85rem}.predict-section input[type=text]{font-size:1rem;padding:10px}.btn{padding:12px 25px}}
+    
     </style>
-    
-    
-</head>
+    </head>
 
 <body class="overflow-x-hidden">
     <div class="overlay"></div>
     <div>
         <header>
             <nav class="flex justify-between">
-                <div class="header">SDSS Galaxy Classifier</div>
+                <div class="header">Galaxy Classifier</div>
                 <nav class="navb">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
@@ -486,26 +505,26 @@
                 <h2 class="text-center">Predict Your Galaxy's Subclass</h2>
                 <p class="text-center">Enter your galaxy's photometric data:</p>
                 <form action="/submit" method="post">
-                    <label for="r">r:</label>
-                    <input type="text" name="r" required><br>
-                    <label for="i">i:</label>
-                    <input type="text" name="i" required><br>
-                    <label for="z">z:</label>
-                    <input type="text" name="z" required><br>
-                    <label for="petroRad_g">PetroRad_g:</label>
-                    <input type="text" name="petroRad_g" required><br>
-                    <label for="petroRad_r">PetroRad_r:</label>
-                    <input type="text" name="petroRad_r" required><br>
-                    <label for="petroR50_u">PetroR50_u:</label>
-                    <input type="text" name="petroR50_u" required><br>
-                    <label for="petroR50_g">PetroR50_g:</label>
-                    <input type="text" name="petroR50_g" required><br>
-                    <label for="petroR50_i">PetroR50_i:</label>
-                    <input type="text" name="petroR50_i" required><br>
-                    <label for="petroR50_r">PetroR50_r:</label>
-                    <input type="text" name="petroR50_r" required><br>
-                    <label for="petroR50_z">PetroR50_z:</label>
-                    <input type="text" name="petroR50_z" required><br>
+                    <label for="r">r</label>
+                    <input type="text" name="r" placeholder="Enter r value" required><br>
+                    <label for="i">i</label>
+                    <input type="text" name="i" placeholder="Enter i value" required><br>
+                    <label for="z">z</label>
+                    <input type="text" name="z" placeholder="Enter z value" required><br>
+                    <label for="petroRad_g">PetroRad_g</label>
+                    <input type="text" name="petroRad_g" placeholder="Enter PetroRad_g value" required><br>
+                    <label for="petroRad_r">PetroRad_r</label>
+                    <input type="text" name="petroRad_r" placeholder="Enter PetroRad_r value" required><br>
+                    <label for="petroR50_u">PetroR50_u</label>
+                    <input type="text" name="petroR50_u" placeholder="Enter PetroR50_u value" required><br>
+                    <label for="petroR50_g">PetroR50_g</label>
+                    <input type="text" name="petroR50_g" placeholder="Enter PetroR50_g value" required><br>
+                    <label for="petroR50_i">PetroR50_i</label>
+                    <input type="text" name="petroR50_i" placeholder="Enter PetroR50_i value" required><br>
+                    <label for="petroR50_r">PetroR50_r</label>
+                    <input type="text" name="petroR50_r" placeholder="Enter PetroR50_r value" required><br>
+                    <label for="petroR50_z">PetroR50_z</label>
+                    <input type="text" name="petroR50_z" placeholder="Enter PetroR50_z value" required><br>
                     <button type="submit" class="btn">Submit</button>
                 </form>
             </section>
