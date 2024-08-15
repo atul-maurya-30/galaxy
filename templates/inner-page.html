@@ -7,7 +7,7 @@
     <meta name="description" content="Explore SDSS Galaxy Classification with Machine Learning. Use our tool to classify galaxies based on photometric data and gain insights into the universe">
     <title>Prediction Result</title>
     <style>
-    .btn:hover,.predict-section input[type=text]{background-color:rgba(255,255,255,.2)}.header,.predict-section h2,.step h2{font-family:Roboto,sans-serif;font-weight:700}.btn,.navb a{padding:10px 20px}body,html{overflow-x:hidden;height:100%;padding:0;margin:0}body{background:url('/static/images/galaxy.avif') center center/cover no-repeat fixed;flex-direction:column}.contact-icons,.navb,nav{gap:20px}.contact-icons,.nav-container,.navb,body,nav{display:flex}.btn,.navb,.navb a,body,footer,footer p,header{color:#fff}.predict-section,footer,header{text-align:center}nav{justify-content:space-between;align-items:center;margin-bottom:20px}.navb{list-style:none;margin:0;font-family:'Open Sans',sans-serif}.btn{border:2px solid #fff;border-radius:7px;cursor:pointer;background-color:#120e0d;font-weight:600;transition:.3s}.btn:hover{box-shadow:0 0 10px rgba(255,255,255,.8);transform:scale(1.05)}.predict-section h2,.step h2{font-size:1.5rem}.predict-section{margin:20px auto;max-width:600px;padding:20px;border:1px solid #ddd;border-radius:5px;background-color:rgba(255,255,255,.3)}.predict-section input[type=text]{margin-bottom:10px;padding:8px;border-radius:4px;border:1px solid #ddd;width:80%}.predict-section input[type=text]::placeholder{color:#442d2d;text-align:center}.predict-section input[type=text]:focus{outline:0;border-color:#0af}footer{padding:30px;background-color:rgba(0,0,0,.7);width:100%;border-top:1px solid #ddd}.footer-content{max-width:1200px;margin:0 auto;align-items:center}.contact-icons{justify-content:center;margin:20px 0}.contact-icon{width:40px;height:40px;transition:transform .3s}.contact-icon:hover{filter:brightness(1.5);transform:scale(1.1)}.steps{margin:20px auto;max-width:800px;padding:0 15px}.step{margin:20px 0}.step h2{margin-bottom:10px}.step p{font-family:'Open Sans',sans-serif;font-weight:300;font-size:1rem;line-height:1.6}header{background-color:rgba(0,0,0);padding:20px 10px 0 20px;position:relative;border-bottom:1px solid #ddd}.nav-container{justify-content:space-between;align-items:center;position:relative}.header{font-size:40px}.navb a{text-decoration:none;border-radius:5px;transition:background-color .3s,color .3s,transform .3s}.navb a:hover{background-color:rgba(255,240,240,.2);color:#0af;transform:scale(1.1)}.close,.hamburger{background:0 0;border:none;font-size:30px;cursor:pointer;color:#fff;position:absolute;top:20px;right:20px;display:none}.page-container{display:flex;flex-direction:column;min-height:100vh;background-color:rgba(0,0,0,.7)}@media only screen and (max-width:768px){.container{max-width:90vw}.steps{padding:0 10px;max-width:100%}.step h2{font-size:1.25rem}.step p{font-size:.9rem}.navb{width:100%;flex-direction:column;align-items:normal;display:inline-flexbox;background-color:rgba(0,0,0);position:absolute;padding:10px 0 0 10px;left:0;right:5px;top:70px;box-shadow:0 4px 6px rgba(0,0,0);overflow:hidden;transition:height .3s,opacity .3s;opacity:0}.navb.active{height:auto;opacity:1}.close,.hamburger{display:block}.close,.navb.active~.hamburger,.navb:not(.active)~.close{display:none}}@media only screen and (max-width:480px){.btn,.step h2{font-size:1rem}.predict-section{padding:15px;width:90%}.steps{padding:0 5px}.step{margin:15px 0}.step p{font-size:.85rem}.predict-section input[type=text]{font-size:1rem;padding:10px}.btn{padding:12px 25px}.hamburger{display:block}.close,.navb{display:none}.navb.active{display:flex}}</style>
+    .btn:hover{background-color:rgba(255,255,255,.2)}.header,.predict-section h2,.step h2{font-family:Roboto,sans-serif;font-weight:700}.btn,.navb a{padding:10px 20px}body,html{overflow-x:hidden;height:100%;padding:0;margin:0}body{background:url('/static/images/galaxy.avif') center center/cover no-repeat fixed;flex-direction:column}.contact-icons,.navb,nav{gap:20px}.contact-icons,.nav-container,.navb,body,nav{display:flex}.btn,.navb,.navb a,body,footer,footer p,header{color:#fff}.predict-section,footer,header{text-align:center}nav{justify-content:space-between;align-items:center;margin-bottom:20px}.navb{list-style:none;margin:0;font-family:'Open Sans',sans-serif}.btn{border:2px solid #fff;border-radius:7px;cursor:pointer;background-color:#120e0d;font-weight:600;transition:.3s}.btn:hover{box-shadow:0 0 10px rgba(255,255,255,.8);transform:scale(1.05)}.predict-section h2,.step h2{font-size:1.5rem}.predict-section{margin:20px auto;max-width:600px;padding:20px;border:1px solid #ddd;border-radius:5px;background-color:rgba(255,255,255,.3)}footer{padding:30px;background-color:rgba(0,0,0,.7);width:100%;border-top:1px solid #ddd}.footer-content{max-width:1200px;margin:0 auto;align-items:center}.contact-icons{justify-content:center;margin:20px 0}.contact-icon{width:40px;height:40px;transition:transform .3s}.contact-icon:hover{filter:brightness(1.5);transform:scale(1.1)}.steps{margin:20px auto;max-width:800px;padding:0 15px}.step{margin:20px 0}.step h2{margin-bottom:10px}.step p{font-family:'Open Sans',sans-serif;font-weight:300;font-size:1rem;line-height:1.6}header{background-color:rgba(0,0,0);padding:20px 10px 0 20px;position:relative;border-bottom:1px solid #ddd}.nav-container{justify-content:space-between;align-items:center;position:relative}.header{font-size:40px}.navb a{text-decoration:none;border-radius:5px;transition:background-color .3s,color .3s,transform .3s}.navb a:hover{background-color:rgba(255,240,240,.2);color:#0af;transform:scale(1.1)}.close,.hamburger{background:0 0;border:none;font-size:30px;cursor:pointer;color:#fff;position:absolute;top:10px;right:20px;padding-bottom:10px;display:none}.page-container{display:flex;flex-direction:column;min-height:100vh;background-color:rgba(0,0,0,.7)}.predict-section h2{font-size:2em;margin-bottom:20px}.predict-section p{font-size:18px;line-height:1.6}.predict-section b{color:#fff;font-size:30px;text-shadow:1px 1px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000}.predict-section .btn{color:#fff;text-decoration:underline}@media only screen and (max-width:768px){.container{max-width:90vw}.steps{padding:0 10px;max-width:100%}.step h2{font-size:1.25rem}.step p{font-size:.9rem}.navb{width:100%;flex-direction:column;align-items:normal;display:inline-flexbox;background-color:rgba(0,0,0);position:absolute;padding:10px 0 0 10px;left:0;right:5px;top:70px;box-shadow:0 4px 6px rgba(0,0,0);overflow:hidden;transition:height .3s,opacity .3s;opacity:0}.navb.active{height:auto;opacity:1}.close,.hamburger{display:block}.close,.navb.active~.hamburger,.navb:not(.active)~.close{display:none}}@media only screen and (max-width:480px){.btn,.step h2{font-size:1rem}.predict-section{padding:15px;width:90%}.steps{padding:0 5px}.step{margin:15px 0}.step p{font-size:.85rem}.btn{padding:12px 25px}.hamburger{display:block}.close,.navb{display:none}.navb.active{display:flex}.predict-section h2{font-size:1.5em}.predict-section .btn,.predict-section p{font-size:14px}.predict-section b{font-size:24px}.header,.hamburger{font-size:150%;}}</style>
 </head>
 
 <body>
@@ -16,10 +16,10 @@
             <nav class="nav-container">
                 <div class="header">Galaxy Classifier</div>
                 <button class="hamburger" id="hamburger-button">
-                    ☰
+                    ≡
                 </button>
                 <button class="close" id="close-button">
-                    ✖
+                    ×
                 </button>
                 <div class="navb" id="nav-links">
                     <a href="/#home">HOME</a>
@@ -33,21 +33,14 @@
         <main style="flex: 1;">
             <section class="predict-section">
                 <h2>Prediction Result</h2>
-                <p style="font-size: 18px; line-height: 1.6;">
+                <p>
                     The galaxy is classified as:
-                    <b style="
-                        color: rgb(255, 255, 255); 
-                        font-size: 30px; 
-                        text-shadow: 
-                            1px 1px 0 #000000, 
-                            -1px -1px 0 #000000,  
-                            1px -1px 0 #000000, 
-                            -1px 1px 0 #000000;">
+                    <b>
                         {{ prediction }}
                     </b>
 
                 </p>
-                <a href="/" class="btn" style="color: #ffffff; text-decoration: underline;">Go Back</a>
+                <a href="/" class="btn">Go Back</a>
             </section>
         </main>
 
