@@ -24,6 +24,7 @@ ___
 - [Usage](#usage)
 - [License](#license)
 - [Deployment](#deployment)
+- [Google Badges](#google-badges)
 
 ---
 
@@ -227,6 +228,15 @@ ___
 You can access the deployed application here: [Galaxy Classifier](https://galaxy-classifier.onrender.com)
 
 Feel free to try out the app and explore its features.
+
+---
+
+### Google Badges
+
+I have earned various Google Cloud badges showcasing my skills and expertise. You can view them here:
+
+- [Google Cloud Badges]([https://your-google-badges-link.com](https://www.cloudskillsboost.google/public_profiles/9797efa8-4ca6-4c86-92d1-e6890f3ad461))
+
 
 ---
 
