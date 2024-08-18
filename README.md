@@ -235,7 +235,7 @@ Feel free to try out the app and explore its features.
 
 I have earned various Google Cloud badges showcasing my skills and expertise. You can view them here:
 
-- [Google Cloud Badges](https://your-google-badges-link.com](https://www.cloudskillsboost.google/public_profiles/9797efa8-4ca6-4c86-92d1-e6890f3ad461)
+- [Google Cloud Badges](https://www.cloudskillsboost.google/public_profiles/9797efa8-4ca6-4c86-92d1-e6890f3ad461)
 
 
 ---
