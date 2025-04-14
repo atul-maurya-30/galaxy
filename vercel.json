@@ -1,28 +1,27 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "app.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.11" 
+      {
+          "src": "app.py",
+          "use": "@vercel/python",
+          "config": {
+              "maxLambdaSize": "50mb",  // Increased from 15mb
+              "runtime": "python3.12"   // Matches the pip version
+          }
+      },
+      {
+          "src": "static/**",
+          "use": "@vercel/static"
       }
-    },
-    {
-      "src": "static/**",
-      "use": "@vercel/static"
-    }
   ],
   "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "app.py",
-      "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
-    }
+      {
+          "src": "/static/(.*)",
+          "dest": "/static/$1"
+      },
+      {
+          "src": "/(.*)",
+          "dest": "app.py"
+      }
   ]
 }
