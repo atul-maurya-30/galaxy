@@ -167,7 +167,7 @@ ___
 
    - **Save the Best Model**
    
-      - **File:** `RF.pkl` - Save the best-performing Random Forest model using Python’s `joblib` module. This avoids retraining the model and allows for future use.
+      - **File:** `RF.joblib` - Save the best-performing Random Forest model using Python’s `joblib` module. This avoids retraining the model and allows for future use.
    
    - **Integrate with Web Framework**
    
