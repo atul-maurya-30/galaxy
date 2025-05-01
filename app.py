@@ -6,15 +6,15 @@
 #          3. Take the result received from model and display it
 
 from flask import Flask, render_template, request
-import pickle
+import joblib
 import pandas as pd
 
 # Create a Flask application instance
 app = Flask(__name__)
 
 # Load the trained model
-with open('RF.pkl', 'rb') as file:
-    model = pickle.load(file)
+with open('RF.joblib', 'rb') as file:
+    model = joblib.load(file)
 
 # Route for the home page
 @app.route("/")
